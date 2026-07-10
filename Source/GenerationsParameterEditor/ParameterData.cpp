@@ -391,7 +391,7 @@ void AbstractParameterData::update(const bool collapsingHeader, const bool overr
         if (ImGui::Button("Save to work folder"))
             save();
 
-        if (overrideButton)
+        if (true)
         {
             ImGui::SameLine();
 
