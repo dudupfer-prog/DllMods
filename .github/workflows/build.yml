@@ -20,12 +20,11 @@ jobs:
 
     - name: Build Solution
       run: |
-        msbuild Source/DllMods.sln /p:Configuration=Release /p:Platform=x86
+        msbuild Source/GenerationsParameterEditor/GenerationsParameterEditor.sln /p:Configuration=Release /p:Platform=x86
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
       with:
         name: GenerationsParameterEditor
         path: |
-          Source/db/GenerationsParameterEditor.dll
-          Source/Release/GenerationsParameterEditor.dll
+          **/GenerationsParameterEditor.dll
